@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reverse String</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <script src="script.js" defer></script>
+    <style>
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: #ffffff;
+            color: #111;
+            min-height: 100vh;
+            padding: 48px 40px;
+        }
+
+        h1 {
+            font-size: 2.6rem;
+            font-weight: 700;
+            margin-bottom: 24px;
+            letter-spacing: -0.5px;
+        }
+
+        #inputText {
+            width: 100%;
+            max-width: 680px;
+            padding: 14px 18px;
+            font-size: 1.05rem;
+            font-family: inherit;
+            border: 1.5px solid #d0d0d0;
+            border-radius: 10px;
+            outline: none;
+            color: #555;
+            transition: border-color 0.2s;
+            display: block;
+        }
+
+        #inputText:focus {
+            border-color: #2563eb;
+        }
+
+        #btnReverse {
+            margin-top: 18px;
+            padding: 12px 22px;
+            font-size: 1rem;
+            font-weight: 600;
+            background: #2563eb;
+            color: #fff;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: background 0.15s;
+        }
+
+        #btnReverse:hover { background: #1d4ed8; }
+
+        #btnReverse .icon {
+            font-size: 1.1rem;
+        }
+
+        #output {
+            margin-top: 28px;
+            font-size: 1.05rem;
+            color: #111;
+            min-height: 1.4em;
+            word-break: break-all;
+        }
+
+        #btnCopy {
+            margin-top: 18px;
+            padding: 12px 22px;
+            font-size: 1rem;
+            font-weight: 600;
+            background: #6b7280;
+            color: #fff;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: background 0.15s, opacity 0.15s;
+        }
+
+        #btnCopy:disabled {
+            opacity: 0.45;
+            cursor: not-allowed;
+        }
+
+        #btnCopy:hover:not(:disabled) { background: #4b5563; }
+
+        .copy-feedback {
+            font-size: 0.85rem;
+            color: #16a34a;
+            margin-top: 8px;
+            min-height: 1.2em;
+            transition: opacity 0.3s;
+        }
+    </style>
+</head>
+<body>
+    <h1>Reverse String</h1>
+    <input type="text" id="inputText" placeholder="Hello, welcome to AI4Devs" aria-label="Text to reverse" />
+    <button id="btnReverse">Reverse <span class="icon">🔄</span></button>
+    <div id="output" aria-live="polite"></div>
+    <button id="btnCopy" disabled>Copy 📋</button>
+    <div class="copy-feedback" id="copyFeedback" aria-live="polite"></div>
+</body>
+</html>
